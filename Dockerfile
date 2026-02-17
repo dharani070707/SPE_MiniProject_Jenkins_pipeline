@@ -4,7 +4,7 @@ FROM ubuntu:latest
 WORKDIR /app
 
 # Copy the calculator.sh script into the container
-COPY calculator.sh /app/calculator.sh
+COPY Calculator.sh /app/calculator.sh
 
 # Ensure the script has execute permissions
 RUN chmod +x /app/calculator.sh
