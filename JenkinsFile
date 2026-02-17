@@ -4,7 +4,7 @@ pipeline {
       githubPush() 
    }
     environment {
-        DOCKER_IMAGE_NAME = 'Calculator'
+        DOCKER_IMAGE_NAME = 'calculator'
         GITHUB_REPO_URL = 'https://github.com/dharani070707/SPE_MiniProject_Jenkins_pipeline.git'
     }
 
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag Calculator dharaniprasads/calculator:latest'
+                    sh 'docker tag calculator dharaniprasads/calculator:latest'
                     sh 'docker push dharaniprasads/calculator'
                     }
                  }
